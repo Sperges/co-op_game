@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Scenes/Rope.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scenes/Floor.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/Vita.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/UI.tscn" type="PackedScene" id=4]
+
+[node name="World" type="Node2D"]
+
+[node name="Rope" parent="." instance=ExtResource( 1 )]
+position = Vector2( 511.603, 421.941 )
+scale = Vector2( 2.25, 1 )
+
+[node name="Floor" parent="." instance=ExtResource( 2 )]
+position = Vector2( 518.05, 458.413 )
+scale = Vector2( 100, 1 )
+
+[node name="Vita" parent="." instance=ExtResource( 3 )]
+position = Vector2( 511.763, 358.83 )
+scale = Vector2( 3, 3 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="UI" parent="CanvasLayer" instance=ExtResource( 4 )]
+
